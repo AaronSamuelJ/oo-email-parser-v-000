@@ -5,7 +5,7 @@ class EmailParser  "avi@test.com, arel@test.com" "avi@test.com arel@test.com"
     @emails = emails
   end
   def parse
-    @emails.split(/[, ]/).select{|email| email[-3..-1] == "com"}
+    @emails.split(/[, ]/).select{|email| email[-3..-1] == "com"}.uniq
     #a.split(/[, ]/).select{|email| email[-3..-1] == "com"}
 
   end #{}/\.(?=[\w])/
