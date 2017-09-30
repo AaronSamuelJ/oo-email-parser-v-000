@@ -5,6 +5,6 @@ class EmailParser
     @emails = emails
   end
   def parse
-    binding.pry
+    @emails.split(", ")
   end
 end
