@@ -5,6 +5,6 @@ class EmailParser
     @emails = emails
   end
   def parse
-    @emails.split(","," ")
-  end
+    @emails.split(/[, ](?=[\w@.])/)
+  end #{}/\.(?=[\w])/
 end
